@@ -1,5 +1,5 @@
 #membuat struktur data dictionary
-userLogin : dict[str, int | str] = {"name": "alfa", 
+userLogin : dict[str, int | str] = {"name": "Kholil", 
                 "age": 21, 
                 "role": "admin"}
 print(type(userLogin))

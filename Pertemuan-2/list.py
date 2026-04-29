@@ -1,63 +1,100 @@
-#pertemuan 2, list
+#LIST PERTEMUAN 2 (2/16/2024)
 
-import sys
-colors: list[str] = ["red"]
-print(colors)
-print(sys.getsizeof(colors))
-
-#menambahkan elemen ke dalam list
-colors.append("blue")
-print(colors)
-print(sys.getsizeof(colors))
-
-colors.insert(0, "White")
-print(colors)
-print(sys.getsizeof(colors))
-
-colors.append("green")
-print(colors)
-print(sys.getsizeof(colors))
-
-colors.append("yellow")
-print(colors)
-print(sys.getsizeof(colors))
-
-colors.append("purple")
-print(colors)
-print(sys.getsizeof(colors))
-
-colors.append("pink")
-print(colors)
-print(sys.getsizeof(colors))
-
-colors.append("black")
-print(colors)
-print(sys.getsizeof(colors))
-
-colors.append("brown")
-print(colors)
-print(sys.getsizeof(colors))
+print ("1 List adalah struktur data untuk menyimpan banyak nilai dalam satu variabel")
+#mobil = ["avanza", "xenia", "civic", 1,2,3]
+print("avanza", "xenia", "civic", 1,2,3)
+print ("\n")
 
 
-#menghapus elemen dari list
-colors.pop()
-print(colors)
-print(sys.getsizeof(colors))
+print ("2 MUTABLE (bisa diubah)")
+#Penghitungan list dimulai dari 0
+angka = [1, 2, 3]
+angka[0] = 10
+print(angka)
+print ("\n")
 
-colors.remove("red")
-print(colors)
-print(sys.getsizeof(colors))
 
-colors.reverse
-print(colors)
-print(sys.getsizeof(colors))
+mobil = ["avanza", "xenia", "civic"]
+print ("3 Slicing (mengambil indeks tertentu dalam list)")
+print(mobil[:1])  
+print(mobil[1:3])  
+print ("\n")
 
-numbers: list[int] = [3.60, 3.80, 3.60, 3.80, 3.60, 3.80, 3.60, 3.80]
-print(sum(numbers)/len(numbers))
-print(len(numbers))
-print(sys.getsizeof(numbers))
-print(numbers)
 
-backup_numbers: list[float] = numbers.copy()
-print(backup_numbers)
-print(sys.getsizeof(backup_numbers))
+print ("4 Menambahkan Data ke List di posisi tertentu")
+mobil.insert(1, "punya Ahmad")
+print(mobil)
+print ("\n")
+
+
+print ("5 Menambahkan Data ke list di posisi belakang")
+mobil.append("fortuner")
+print(mobil)
+print ("\n")
+
+
+print ("6 Menghapus Data dari List")
+mobil.remove("xenia")    #bisa juga pop
+print(mobil)
+print ("\n")
+
+
+print ("7 Menghapus Data dari List dengan indeks tertentu")
+del mobil[0]
+print(mobil)
+print ("\n")
+
+
+print ("8 Menghapus Data dari List dengan pop")
+mobil.pop(2)  
+print(mobil)
+print ("\n")
+
+
+print ("9 Menghitung jumlah data dalam List")
+jumlah_mobil = len(mobil)
+print("Jumlah mobil:", jumlah_mobil)
+print ("\n")
+
+
+print ("10 Mengurutkan List")
+mobil.sort()
+print(mobil)
+print ("\n")
+
+
+print ("11 Membalik urutan List")
+mobil.reverse()
+print(mobil)
+print ("\n")
+
+
+print ("12 Menggabungkan dua List")
+mobil_lain = ["pajero", "brio"]
+semua_mobil = mobil + mobil_lain
+print(semua_mobil)
+print ("\n")
+
+
+print ("13 Menghitung jumlah kemunculan suatu nilai dalam List")
+jumlah_avanza = semua_mobil.count("avanza")
+print("Jumlah avanza:", jumlah_avanza)
+print ("\n")
+
+
+print ("14 Mencari indeks suatu nilai dalam List")
+indeks_civic = semua_mobil.index("civic")
+print("Indeks civic:", indeks_civic)
+print ("\n")
+
+
+print ("15 Mengosongkan List")
+semua_mobil.clear()
+print(semua_mobil)
+print ("\n")
+
+
+print ("16 Membuat List dengan tipe data campuran")
+campuran = [1, "dua", 3.0, True]
+print(campuran)
+print ("\n")

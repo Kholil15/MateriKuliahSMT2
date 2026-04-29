@@ -1,22 +1,28 @@
-import streamlit as st
 import sys
-# Membuat struktur Tuple
-logApps = ("User1 login," "User2 login," "User3 login")
-print (logApps)
-print (sys.getsizeof(logApps))
-
-# Membuktikan Memory tuple lebih efisien dari list
+# tuple lebih efisien dalam penggunaan memori dibandingkan dengan list
 logAppsList = ["User1 Login"]
-print (logAppsList)
-print ("Memiliki ukuran list", sys.getsizeof(logAppsList))
+print(logAppsList)
+print(sys.getsizeof(logAppsList))
 
-# pembuktian tuple tidak bisa diubah
-# 1.tambah
-#logApps.append ("User4 Login")
-# 2. Ubah 
-# logApps [0] = "User1 logout"
+# membuat struktur tuple
+logApps = ("User1 Login")
+print(logApps)
+print(sys.getsizeof(logApps))
 
-# 3.Hapus 
-# del logApps.append ()
+# pembuktian Tuple tidak bisa diubah
+# tambah data baru ke dalam tuple
+# logApps.append("User4 Login") # akan error karena tuple tidak bisa diubah
+# ubah data di dalam tuple
+# logApps[0] = "User1 Logout" # akan error karena tuple tidak bisa diubah
 
-print ()
+# hapus
+# del logApps[1]
+# pembuktian tuple bisa diakses dengan index
+print(logApps[0]) # akan menampilkan "User1 Login"
+print(logApps[1]) # akan menampilkan "User2 Login"  
+print(logApps[2]) # akan menampilkan "User3 Login"
+
+# menduplikat Tuple 
+logAppsBackup = logApps
+print("ini isi backup logApps: ", logAppsBackup)
+print("ini isi logApps: ", logApps)
